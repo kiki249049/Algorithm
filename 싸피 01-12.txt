@@ -1,0 +1,13 @@
+2월 알고리즘 집중기간(자료구조) - IM취득
+3월 파이썬, 장고
+4월 알고리즘 2차 집중기간 - A형 평가진행
+5월 자바스크립트, Vue 페어프로젝트
+
+https://abit.ly/ssafy7-document 필요한 tool 업로드
+https://abit.ly/gwangju1 광주 1반 싸피페이지
+
+GUI vs CLI
+
+GUI 그냥 우리가보는 폴더창
+
+CLI 도스창
