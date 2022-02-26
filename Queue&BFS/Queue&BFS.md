@@ -58,5 +58,37 @@ pprint(G)
 BFS(G,1,visited)
 ```
 
+# 최소 경로 BFS
+
+```python
+def bfs(x,y,N) :
+    visited=[[0]*N for _ in range(N)] # 미로의 크기만큼 visited 생성
+    queue=[]        # 큐 생성
+    queue.append([x,y])  # 시작점 인큐
+    visited[x][y] = 1  # 시작점 방문표시
+    while queue :  # 큐가 비어있지 않으면 반복
+        x,y=queue.pop(0) # 디큐
+        if maze[x][y] == 3 :
+            return visited[x][y] - 2 # 출발과 도착을 뺀 칸의 수
+        for dx,dy in [[1,0],[0,-1],[-1,0],[0,1]] :
+            nx,ny = x+dx, y+dy # 주변 칸 좌표
+            if 0<=nx<N and 0<=ny<N and  maze[nx][ny] != 1 and visited[nx][ny] == 0 :
+                queue.append([nx,ny])
+                visited[nx][ny] = visited[x][y] + 1
+    return 0
+
+T = int(input())
+for tc in range(1,T+1) :
+    N=int(input())
+    maze=[list(map(int,input())) for _ in range(N)]
+    for i in range(N) :
+        for k in range(N) :
+            if maze[i][k] == 2:   # 시작점 찾기
+                x,y=i,k
+                break
+    ans = bfs(x,y,N)
+    print(f'#{tc} {ans}')
+```
+
 
 
