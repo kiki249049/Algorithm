@@ -5,8 +5,10 @@
 insert
 
 ```python
-heap = [0,2,3,5,4,7,6]
+heap = [0,2,3,5,4,7,6] # 앞의 0은 인덱스 맞춰줄려고 일부러 형식적으로 넣어준것.
 
+import sys
+input = sys.stdin.readline
 def Insert(num) :
   # 1. 제일 마지막 단말 노드에 데이터를 삽입한다.
   heap.append(num)
@@ -16,7 +18,6 @@ def Insert(num) :
   while ((numIdx != 1) and (num < heap[numIdx//2])) :
     heap[numIdx], heap[numIdx//2] = heap[numIdx//2], heap[numIdx]
     numIdx = numIdx // 2
-    print(heap)
 
 Insert(1)
 
@@ -28,21 +29,21 @@ Insert(1)
 delete
 
 ```python
-heap = [0, 1, 3, 2, 4, 7, 6, 5]
+heap = [0, 1, 3, 2, 4, 7, 6, 5] # 이것도 앞의 0은 인덱스 맞출려고 넣어준거라 무시.
 
 def Delete(heap) :
   # 1. 가져올 '최소값'을 미리 저장해준다.
-  result = heap[0]
+  result = heap[1]
   # 2. 가장 마지막 노드의 값과 루트 노드의 값을 Swap 해준다.
-  heap[-1], heap[0] = heap[0], heap[-1]
+  heap[-1], heap[1] = heap[1], heap[-1]
   # 삭제할 값을 맨 뒤로 보냈으니, 삭제해준다.
-  heap.pop()
+  print(heap.pop())
 
   # 3. 현재 노드에서 자식 노드와 비교 하면서 자식 노드가 더 작은 값이라면 Swap해준다.
   # 4. 위치를 찾을 때 까지 3번 과정을 반복한다.
-  parent = 0
+  parent = 1
   while (True) :
-    child = parent * 2 + 1
+    child = parent * 2
 
     if (child+1 < len(heap) and heap[child] > heap[child+1]) : child += 1
     if (child >= len(heap) or heap[child] > heap[parent]) : break
