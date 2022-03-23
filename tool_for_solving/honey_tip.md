@@ -30,3 +30,14 @@ def permutation(arr,n) :
     
     return result
 ```
+
+### 인풋값 숫자만 int로 바꾸기
+
+```python
+def int_chg(char) :
+    if char.isdecimal() :
+        return int(char)
+    else :
+        return char
+```
+
