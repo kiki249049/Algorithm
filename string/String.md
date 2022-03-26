@@ -17,13 +17,17 @@ def BruteForce{p,t} :
             j=-1
         i += 1
         j += 1
-    if j == M :
+    if j == M : # 찾았을 경우이다.
         return i-M
-    else : 
+    else :  # 못 찾았을 경우
         return -1
 ```
 
 최악의 경우 시간복잡도는 텍스트의 모든 위치에서 패턴을 비교해야 하므로 O(MN)이 된다. (매우 안좋음)
+
+p는 j 
+
+t는 i 
 
 ### 카프-라빈 알고리즘
 
