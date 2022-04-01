@@ -33,14 +33,14 @@ def pre_order(n) :
         
 def in_order(n) :
     if n : # n 에 0이 들어올경우는 안됨
-        pre(ch1[n])
+        in_order(ch1[n])
         print(n)
-        pre(ch2[n])
+        in_order(ch2[n])
         
 def post_order(n) :
     if n : # n 에 0이 들어올경우는 안됨
-        pre(ch1[n])
-        pre(ch2[n])
+        post_order(ch1[n])
+        post_order(ch2[n])
         print(n)
 ```
 
