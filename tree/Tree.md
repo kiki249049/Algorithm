@@ -93,6 +93,7 @@ def del() :
             break
         tree[child],tree[parent]=tree[parent],tree[child]
         parent = child
+ # 인덱스 맞추기 위한 0이 꼭 있어야한다.
     
 ```
 
