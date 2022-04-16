@@ -39,12 +39,11 @@ def BFS(G,v,visited) :
     queue.append(v)
     while queue :
         t=queue.pop(0)
-        if not visited[t] :
-            visited[t] = 1
         print(f'정점노드:{t} 방문상태:{visited}')
         print(f'큐상태:{queue}')
         for i in range(1,len(G[t])) :
             if not visited[i] and G[t][i]==1 :
+                visited[i] = 1
                 queue.append(i)
 
 V,E=map(int,input().split())
