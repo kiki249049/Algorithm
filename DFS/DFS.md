@@ -45,10 +45,10 @@ def f(i,N,s,t) : # s 이전까지 고려된 원소의 합, t 목표값
         bit[i] = 0
         f(i+1, N, s, t)
     return
-a = [1,2,3,4,5,6,7,8]
+a = [1,2,3,4,5,6,7,8,9]
 cnt =0
 bit = [0]*len(a)
-print(f(0,len(a),0,8))
+print(f(0,len(a),0,9))
 print(cnt)
 ```
 
