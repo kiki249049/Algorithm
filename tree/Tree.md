@@ -87,7 +87,7 @@ def del() :
     parent=1
     while True : 
         child = parent * 2
-    	if child+1 < len(tree) and tree[child] > tree[child+1] :
+    	if child+1 < len(tree) and tree[child] > tree[child+1] : # 오른쪽 자식이 더 작으면 오른쪽으로 바꿈
         child += 1
       	if child >= len(tree) or tree[child] > tree[parent] :
             break
